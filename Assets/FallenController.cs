@@ -9,12 +9,12 @@ public class FallenController : MonoBehaviour
     [Tooltip("Circle")]
     private GameObject createPrefab;
     [SerializeField]
-    [Tooltip("-6,4.5")]
+    [Tooltip("-6,4")]
     private Transform rangeA;
     [SerializeField]
-    [Tooltip("5.6,4.5")]
+    [Tooltip("6,4")]
     private Transform rangeB;
-
+    [SerializeField]
     private float time;
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class FallenController : MonoBehaviour
     {
         time = time + Time.deltaTime;
 
-        if (time > 2.0f)
+        if (time > 0.7f)
         {
             float x = Random.Range(rangeA.position.x, rangeB.position.x);
             float y = Random.Range(rangeA.position.y, rangeB.position.y);
